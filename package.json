@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
+    "prepare": "husky install",
     "lint": "eslint --fix ./**/*.tsx",
     "stylelint": "stylelint --fix ./src/**/*.css",
-    "format": "prettier -w src/**/*.tsx",
+    "format": "prettier -w",
     "fix": "yarn format && yarn stylelint && yarn lint",
     "start": "vite",
     "dev": "vite",
@@ -34,8 +35,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css}": [
-      "fix"
-    ]
+    "*.{js,jsx,ts,tsx}": "lint",
+    "*.css": "stylelint",
+    "*": "format"
   }
 }
