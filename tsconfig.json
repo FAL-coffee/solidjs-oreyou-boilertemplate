@@ -1,15 +1,46 @@
+// {
+//   "compilerOptions": {
+//     "strict": true,
+//     "target": "ESNext",
+//     "module": "ESNext",
+//     "moduleResolution": "node",
+//     "allowSyntheticDefaultImports": true,
+//     "esModuleInterop": true,
+//     "jsx": "preserve",
+//     "jsxImportSource": "solid-js",
+//     "types": ["vite/client"],
+//     "noEmit": true,
+//     "isolatedModules": true,
+//     "typeRoots": ["src/@types", "node_modules/@types"],
+//     "baseUrl": ".",
+//     "paths": {
+//       "@/*": ["src/*"]
+//     }
+//   },
+//   "include": ["src/**/*"],
+//   "exclude": ["node_modules/**/*"]
+// }
+
 {
   "compilerOptions": {
-    "strict": true,
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "lib": ["ESNext"],
+    "module": "commonjs",
+    "strict": true,
+    "strictNullChecks": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
-    "types": ["vite/client"],
-    "noEmit": true,
-    "isolatedModules": true
-  }
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "types": ["vite/client", "jest"],
+    "typeRoots": ["src/@types", "node_modules/@types"]
+  },
+  "include": ["src/**/*", "test"],
+  "exclude": ["node_modules/**/*"]
 }
