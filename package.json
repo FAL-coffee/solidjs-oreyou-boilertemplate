@@ -35,17 +35,5 @@
   },
   "dependencies": {
     "solid-js": "^1.4.2"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "lint",
-      "format"
-    ],
-    "*.css": "stylelint"
   }
 }
