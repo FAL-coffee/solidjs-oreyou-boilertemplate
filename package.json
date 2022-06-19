@@ -6,7 +6,7 @@
     "prepare": "husky install",
     "lint": "eslint --fix ./**/*.tsx",
     "stylelint": "stylelint --fix ./src/**/*.css",
-    "format": "prettier -w",
+    "format": "prettier --write 'src/*'",
     "fix": "yarn format && yarn stylelint && yarn lint",
     "start": "vite",
     "dev": "vite",
@@ -35,8 +35,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "lint",
-    "*.css": "stylelint",
-    "*": "format"
+    "*.{js,jsx,ts,tsx}": [
+      "lint",
+      "format"
+    ],
+    "*.css": "stylelint"
   }
 }
