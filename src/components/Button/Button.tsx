@@ -1,5 +1,5 @@
-import type { Component, JSX } from "solid-js";
-import { mergeProps } from "solid-js";
+import type { Component, JSX } from 'solid-js';
+import { mergeProps } from 'solid-js';
 
 function withDefaults<P>(Comp: Component<P>, defaultProps: Partial<P>) {
   return ((props: any) => (
@@ -15,7 +15,7 @@ export type ButtonProps =
   | { icon?: never; children: any }
   | { icon: JSX.Element; children: any };
 
-const Button: Component<ButtonProps> = (props) => {
+const Button: Component<ButtonProps> = props => {
   const { children } = props;
 
   return <button>{children}</button>;
