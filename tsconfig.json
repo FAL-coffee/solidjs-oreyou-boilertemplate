@@ -34,8 +34,8 @@
     "emitDeclarationOnly": true,
     "noEmit": false,
     "target": "ESNext",
-    "lib": ["ESNext"],
-    "module": "commonjs",
+		"lib": ["ESNext", "DOM"],
+    "module": "ESNext",
     "strict": true,
     "strictNullChecks": true,
     "emitDecoratorMetadata": true,
@@ -49,7 +49,7 @@
     "isolatedModules": false,
     // "baseUrl": ".",
     "types": ["vite/client", "jest"],
-    "typeRoots": ["src/@types", "node_modules/@types"]
+    "typeRoots": ["src/@types", "node_modules/@types"],
   },
   "include": ["src/**/*", "test"],
   "exclude": ["node_modules/**/*"]
