@@ -23,6 +23,16 @@
 
 {
   "compilerOptions": {
+    // "target": "es2015",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    // "module": "esnext",
+    // "isolatedModules": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "noEmit": false,
     "target": "ESNext",
     "lib": ["ESNext"],
     "module": "commonjs",
@@ -37,7 +47,7 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": false,
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "types": ["vite/client", "jest"],
     "typeRoots": ["src/@types", "node_modules/@types"]
   },
