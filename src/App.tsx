@@ -1,27 +1,21 @@
 import type { Component } from 'solid-js';
+import { createSignal } from 'solid-js';
+import { JSX } from 'solid-js';
 
-import logo from './logo.svg';
-import styles from './App.module.css';
+export const App: Component = () => {
+  const [text, setText] = createSignal('default');
 
-const App: Component = () => {
+  const onChangeHandler: JSX.EventHandlerUnion<
+    HTMLInputElement,
+    Event
+  > = event => {
+    setText((event.target as HTMLInputElement).value);
+  };
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href="https://github.com/solidjs/solid"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Solid
-        </a>
-      </header>
-    </div>
+    <>
+      <input type="text" onInput={onChangeHandler} />
+      <p>Current input: {text()}</p>
+    </>
   );
 };
-
-export default App;
