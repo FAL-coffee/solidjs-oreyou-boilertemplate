@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  solidjs:
+    working_dir: /app
+    build: .
+    container_name: solidjs
+    ports:
+      - '${DEV_SERVER_PORT:-3000}:3000'
+      - '${DEV_SERVER_PORT:-6006}:6006'
+    volumes:
+      - ./:/app
