@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
-RUN set -ex \
-  && apt update && apt install -y libssl-dev openssl ssl-cert \
-  && yarn install
+RUN npm ci --silent
 
 COPY . .
 
